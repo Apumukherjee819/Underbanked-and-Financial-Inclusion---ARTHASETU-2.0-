@@ -1,0 +1,16 @@
+Metric,Value
+Total Workers,"50,000"
+Mean Trust Raw Score,0.7039
+Trust >= 0.70 (High Trust),"27,720 (55.4%)"
+Trust < 0.50 (Low Trust),"2,327 (4.7%)"
+Workers with Document Issues,"27,314 (54.6%)"
+Mean Trust (No Document Issue),0.7038
+Mean Trust (Has Document Issue),0.7040
+Trust Gap (Document Issue),-0.0002
+Workers with 0 Barriers,"10,163 (20.3%)"
+Workers with 3+ Barriers,"7,730 (15.5%)"
+Mean Trust (0 Barriers),0.7544
+Mean Trust (3+ Barriers),0.5785
+Trust Gap (0 vs 3+ Barriers),0.1759
+Top Trust Predictor (RF),has_upi
+Overall Prediction Accuracy,86.8%
