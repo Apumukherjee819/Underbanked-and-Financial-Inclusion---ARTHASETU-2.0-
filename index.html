@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArthaSetu - Adaptive Financial Inclusion Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font: Outfit for a premium, modern feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="arthasetu-theme">
+    <div class="app-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar glass">
+            <div class="sidebar-header">
+                <div class="logo-wrapper">
+                    <div class="logo">
+                        <span class="logo-icon">🪙</span>
+                    </div>
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="brand-info">
+                    <h1 class="brand-name">Artha<span class="gradient-text">Setu</span></h1>
+                    <span class="brand-tagline" data-i18n="brandTagline">Adaptive Inclusion</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <span class="nav-group-title" data-i18n="navGroup1">1. Registration & Profiling</span>
+                    <a href="#" class="nav-item active" id="nav-item-1" onclick="goToScreen(1)">
+                        <span class="nav-num">01</span>
+                        <span class="nav-text" data-i18n="title1">Language & Voice</span>
+                    </a>
+                    <a href="#" class="nav-item locked" id="nav-item-2" onclick="goToScreen(2)">
+                        <span class="nav-num">02</span>
+                        <span class="nav-text" data-i18n="title2">"Know Me" Profile</span>
+                    </a>
+                </div>
+                
+                <div class="nav-group">
+                    <span class="nav-group-title" data-i18n="navGroup2">2. Interactive Assessments</span>
+                    <a href="#" class="nav-item locked" id="nav-item-3" onclick="goToScreen(3)">
+                        <span class="nav-num">03</span>
+                        <span class="nav-text" data-i18n="title3">Financial Literacy</span>
+                    </a>
+                    <a href="#" class="nav-item locked" id="nav-item-4" onclick="goToScreen(4)">
+                        <span class="nav-num">04</span>
+                        <span class="nav-text" data-i18n="title4" data-i18n="certDigital">Digital Confidence</span>
+                    </a>
+                    <a href="#" class="nav-item locked" id="nav-item-5" onclick="goToScreen(5)">
+                        <span class="nav-num">05</span>
+                        <span class="nav-text" data-i18n="title5">Trust & Safety</span>
+                    </a>
+                    <a href="#" class="nav-item locked" id="nav-item-6" onclick="goToScreen(6)">
+                        <span class="nav-num">06</span>
+                        <span class="nav-text" data-i18n="title6">Reliability & Income</span>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <span class="nav-group-title" data-i18n="navGroup3">3. Learning & Lab</span>
+                    <a href="#" class="nav-item locked" id="nav-item-7" onclick="goToScreen(7)">
+                        <span class="nav-num">07</span>
+                        <span class="nav-text" data-i18n="title7">Adaptive Engine</span>
+                    </a>
+                    <a href="#" class="nav-item locked" id="nav-item-8" onclick="goToScreen(8)">
+                        <span class="nav-num">08</span>
+                        <span class="nav-text" data-i18n="title8">Safe Finance Lab</span>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <span class="nav-group-title" data-i18n="navGroup4">4. Summary & Feedback</span>
+                    <a href="#" class="nav-item locked" id="nav-item-9" onclick="goToScreen(9)">
+                        <span class="nav-num">09</span>
+                        <span class="nav-text" data-i18n="title9">Personalised Guidance</span>
+                    </a>
+                    <a href="#" class="nav-item locked" id="nav-item-10" onclick="goToScreen(10)">
+                        <span class="nav-num">10</span>
+                        <span class="nav-text" data-i18n="title10">Readiness Report</span>
+                    </a>
+                    <a href="#" class="nav-item locked" id="nav-item-11" onclick="goToScreen(11)">
+                        <span class="nav-num">11</span>
+                        <span class="nav-text" data-i18n="title11">Feedback Survey</span>
+                    </a>
+                </div>
+
+                <div class="nav-group">
+                    <span class="nav-group-title" data-i18n="navGroup5">5. Next-Gen Security</span>
+                    <a href="#" class="nav-item" id="nav-item-12" onclick="goToScreen(12)">
+                        <span class="nav-num">12</span>
+                        <span class="nav-text" data-i18n="title12">Security Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-item" id="nav-item-13" onclick="goToScreen(13)">
+                        <span class="nav-num">13</span>
+                        <span class="nav-text" data-i18n="title13">Consent Manager</span>
+                    </a>
+                    <a href="#" class="nav-item" id="nav-item-14" onclick="goToScreen(14)">
+                        <span class="nav-num">14</span>
+                        <span class="nav-text" data-i18n="title14">ZKP Verifier</span>
+                    </a>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile glass">
+                    <div class="avatar-circle">A</div>
+                    <div class="user-meta">
+                        <span class="name" id="user-display-name" data-i18n="guestUser">Guest User</span>
+                        <span class="status"><span class="dot"></span> <span data-i18n="online"> Online</span></span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Global Header -->
+            <header class="top-header glass">
+                <div class="header-left">
+                    <button class="mobile-toggle" id="menuBtn">☰</button>
+                    <nav class="breadcrumb">
+                        <span>ArthaSetu</span>
+                        <span class="separator">/</span>
+                        <span class="current-page" id="pageTitle">Language & Voice Selection</span>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <!-- Dynamic Voice Mode Status Indicator -->
+                    <div class="voice-mode-pill glass" onclick="toggleVoiceModeBtn()">
+                        <span class="voice-icon" id="voicePillIcon">🎙️</span>
+                        <span class="voice-status-text" id="voicePillText">Voice Assist: Off</span>
+                        <div class="voice-pulser" id="voicePulser"></div>
+                    </div>
+                    <div class="vertical-divider"></div>
+                    <div class="avatar-header">
+                        <span class="nav-help-icon" onclick="triggerHelp()" title="Help Guidance">❓</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Container -->
+            <div class="content-area">
+                
+                <!-- Screen 1: Language & Voice Selection -->
+                <div class="screen active" id="screen1">
+                    <div class="screen-layout-split">
+                        <div class="intro-hero glass">
+                            <div class="badge-hero" data-i18n="prototype">PROTOTYPE</div>
+                            <h1><span data-i18n="welcomeTitle">Welcome to</span> <span class="gradient-text">ArthaSetu</span></h1>
+                            <p data-i18n="welcomeDesc">ArthaSetu adapts to your financial needs, digital capability, and preferred language. We help you learn formal finance safely.</p>
+                            <div class="hero-counters">
+                                <div class="counter-card">
+                                    <span class="count" data-i18n="langCount">6+</span>
+                                    <span class="label" data-i18n="indianLanguages">Indian Languages</span>
+                                </div>
+                                <div class="counter-card">
+                                    <span class="count" data-i18n="sandboxPct">100%</span>
+                                    <span class="label" data-i18n="practiceSandbox">Practice Sandbox</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-action-container glass">
+                            <h2 data-i18n="selectLang">Select Your Language</h2>
+                            <p class="subtitle">पूरा ऐप आपकी चुनी हुई भाषा में काम करेगा</p>
+                            
+                            <div class="language-selection-grid">
+                                <button class="lang-card active" onclick="selectLanguage('en')">
+                                    <span class="lang-flag">🇬🇧</span>
+                                    <span class="lang-name">English</span>
+                                    <span class="lang-native">English</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('hi')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">हिन्दी</span>
+                                    <span class="lang-native">Hindi</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('ta')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">தமிழ்</span>
+                                    <span class="lang-native">Tamil</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('bn')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">বাংলা</span>
+                                    <span class="lang-native">Bengali</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('te')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">తెలుగు</span>
+                                    <span class="lang-native">Telugu</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('mr')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">मराठी</span>
+                                    <span class="lang-native">Marathi</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('pa')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">ਪੰਜਾਬੀ</span>
+                                    <span class="lang-native">Punjabi</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('ur')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">اردو</span>
+                                    <span class="lang-native">Urdu</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('gu')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">ગુજરાતી</span>
+                                    <span class="lang-native">Gujarati</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('kn')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">ಕನ್ನಡ</span>
+                                    <span class="lang-native">Kannada</span>
+                                </button>
+                                <button class="lang-card" onclick="selectLanguage('as')">
+                                    <span class="lang-flag">🇮🇳</span>
+                                    <span class="lang-name">অসমীয়া</span>
+                                    <span class="lang-native">Assamese</span>
+                                </button>
+                            </div>
+
+                            <div class="voice-assistant-setup-box glass">
+                                <div class="setup-desc">
+                                    <h3 data-i18n="enableVoice">🎙️ Enable Voice Assistance</h3>
+                                    <p data-i18n="voiceDesc">Our virtual guide "ArthaDoot" will read instructions aloud in your selected language.</p>
+                                </div>
+                                <div class="toggle-container">
+                                    <label class="switch">
+                                        <input type="checkbox" id="voiceToggle" onchange="handleVoiceToggleChange(this)">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="footer-navigation">
+                                <button class="btn-primary" onclick="goToScreen(2)">
+                                    Start Profiling <span class="arrow">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 2: "Know Me" Profiling -->
+                <div class="screen" id="screen2">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2>"Know Me" Stage: Tell Us About Yourself</h2>
+                            <p data-i18n="configureApp">We configure the application based on your daily lifestyle and occupation.</p>
+                        </div>
+
+                        <div class="profiling-form-container">
+                            <!-- Field 1: Occupation -->
+                            <div class="form-field-group">
+                                <label class="field-label" data-i18n="questionOccupation">1. What is your primary occupation?</label>
+                                <div class="choices-grid">
+                                    <div class="choice-card" onclick="selectProfileOption('occupation', 'merchant', this)">
+                                        <span class="choice-icon">🏪</span>
+                                        <span class="choice-title" data-i18n="occRetailer">Small Retailer / Vendor</span>
+                                        <span class="choice-sub" data-i18n="occRetailerSub">दुकानदार / रेहड़ी-पटरी</span>
+                                    </div>
+                                    <div class="choice-card" onclick="selectProfileOption('occupation', 'farmer', this)">
+                                        <span class="choice-icon">🚜</span>
+                                        <span class="choice-title" data-i18n="occFarmer">Farmer / Agriculture</span>
+                                        <span class="choice-sub" data-i18n="occFarmerSub">किसान / खेती-बाड़ी</span>
+                                    </div>
+                                    <div class="choice-card" onclick="selectProfileOption('occupation', 'worker', this)">
+                                        <span class="choice-icon">🛵</span>
+                                        <span class="choice-title" data-i18n="occWorker">Gig Worker / Delivery</span>
+                                        <span class="choice-sub" data-i18n="occWorkerSub">डिलिवरी / टैक्सी चालक</span>
+                                    </div>
+                                    <div class="choice-card" onclick="selectProfileOption('occupation', 'dailywager', this)">
+                                        <span class="choice-icon">⚒️</span>
+                                        <span class="choice-title" data-i18n="occDailywager">Daily-wage Earner</span>
+                                        <span class="choice-sub" data-i18n="occDailywagerSub">मजदूर / दैनिक वेतन</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Field 2: Financial Experience -->
+                            <div class="form-field-group">
+                                <label class="field-label" data-i18n="questionFinExp">2. Have you used formal banking and digital payment services?</label>
+                                <div class="choices-grid">
+                                    <div class="choice-card" onclick="selectProfileOption('finExp', 'beginner', this)">
+                                        <span class="choice-icon">🆕</span>
+                                        <span class="choice-title" data-i18n="finBeginner">First-time User</span>
+                                        <span class="choice-sub" data-i18n="finBeginnerSub">Never used UPI / Online banking</span>
+                                    </div>
+                                    <div class="choice-card" onclick="selectProfileOption('finExp', 'basic', this)">
+                                        <span class="choice-icon">🏦</span>
+                                        <span class="choice-title" data-i18n="finBasic">Basic User</span>
+                                        <span class="choice-sub" data-i18n="finBasicSub">Have a bank card, but rarely use UPI</span>
+                                    </div>
+                                    <div class="choice-card" onclick="selectProfileOption('finExp', 'intermediate', this)">
+                                        <span class="choice-icon">📱</span>
+                                        <span class="choice-title" data-i18n="finIntermediate">Intermediate User</span>
+                                        <span class="choice-sub" data-i18n="finIntermediateSub">Use UPI sometimes, need confidence</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Field 3: Digital Confidence -->
+                            <div class="form-field-group">
+                                <label class="field-label" data-i18n="questionDigConf">3. How comfortable are you operating a smartphone?</label>
+                                <div class="choices-grid">
+                                    <div class="choice-card" onclick="selectProfileOption('digConf', 'low', this)">
+                                        <span class="choice-icon">😕</span>
+                                        <span class="choice-title" data-i18n="digLow">Need Assistance</span>
+                                        <span class="choice-sub" data-i18n="digLowSub">Usually ask others to do tasks</span>
+                                    </div>
+                                    <div class="choice-card" onclick="selectProfileOption('digConf', 'medium', this)">
+                                        <span class="choice-icon">🙂</span>
+                                        <span class="choice-title" data-i18n="digMedium">Can Navigate Basic Apps</span>
+                                        <span class="choice-sub" data-i18n="digMediumSub">Use WhatsApp / YouTube easily</span>
+                                    </div>
+                                    <div class="choice-card" onclick="selectProfileOption('digConf', 'high', this)">
+                                        <span class="choice-icon">😎</span>
+                                        <span class="choice-title" data-i18n="digHigh">Highly Confident</span>
+                                        <span class="choice-sub" data-i18n="digHighSub">Can download apps and do typing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(1)" data-i18n="back">← Back</button>
+                            <button class="btn-primary" id="btn-profile-next" onclick="goToScreen(3)" disabled data-i18n="continue">Continue →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 3: Financial Literacy Assessment -->
+                <div class="screen" id="screen3">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="quizTitle">Financial Literacy Assessment</h2>
+                            <p data-i18n="quizDesc">Answer three scenario-based questions so we can understand your financial concepts.</p>
+                        </div>
+
+                        <div class="quiz-container">
+                            <!-- Question 1 -->
+                            <div class="quiz-question-card glass active" id="q-card-1">
+                                <div class="badge-quiz" data-i18n="q1of3">Question 1 of 3</div>
+                                <h3 data-i18n="q1Title">Calculate Flat Interest</h3>
+                                <p class="quiz-scenario" data-i18n="q1Scenario">If you borrow ₹10,000 from a lender for 1 year at a <strong>10% flat interest rate per year</strong>, how much total interest do you pay at the end of the year?</p>
+                                <div class="quiz-options-list">
+                                    <button class="quiz-option" onclick="selectQuizAnswer(1, 0, this)" data-i18n="q1a0">₹1,000 (Correct interest payment)</button>
+                                    <button class="quiz-option" onclick="selectQuizAnswer(1, 1, this)" data-i18n="q1a1">₹100 (1% calculations)</button>
+                                    <button class="quiz-option" onclick="selectQuizAnswer(1, 2, this)" data-i18n="q1a2">₹0 (Interest-free loan)</button>
+                                    <button class="quiz-option" onclick="selectQuizAnswer(1, 3, this)" data-i18n="q1a3">I do not know / Not sure</button>
+                                </div>
+                            </div>
+
+                            <!-- Question 2 -->
+                            <div class="quiz-question-card glass" id="q-card-2">
+                                <div class="badge-quiz" data-i18n="q2of3">Question 2 of 3</div>
+                                <h3 data-i18n="q2Title">Safe PIN & OTP Handling</h3>
+                                <p class="quiz-scenario" data-i18n="q2Scenario">You receive a phone call from an unknown person claiming to be a Bank Manager. They ask for your <strong>UPI PIN</strong> or <strong>OTP</strong> to unlock your account. What do you do?</p>
+                                <div class="quiz-options-list">
+                                    <button class="quiz-option" onclick="selectQuizAnswer(2, 0, this)" data-i18n="q2a0">Share it so my account is not blocked</button>
+                                    <button class="quiz-option" onclick="selectQuizAnswer(2, 1, this)" data-i18n="q2a1">Share it only if they tell me my correct name</button>
+                                    <button class="quiz-option" onclick="selectQuizAnswer(2, 2, this)" data-i18n="q2a2">Never share my PIN/OTP with anyone on a call (Correct)</button>
+                                    <button class="quiz-option" onclick="selectQuizAnswer(2, 3, this)" data-i18n="q2a3">Tell them I will call them back later</button>
+                                </div>
+                            </div>
+
+                            <!-- Question 3 -->
+                            <div class="quiz-question-card glass" id="q-card-3">
+                                <div class="badge-quiz" data-i18n="q3of3">Question 3 of 3</div>
+                                <h3 data-i18n="q3Title">Value of Bank Savings</h3>
+                                <p class="quiz-scenario" data-i18n="q3Scenario">What is the primary benefit of saving money in a formal bank account compared to storing cash in a box at home?</p>
+                                <div class="quiz-options-list">
+                                    <button class="quiz-option" onclick="selectQuizAnswer(3, 0, this)" data-i18n="q3a0">The money earns interest and is safe from theft (Correct)</button>
+                                    <button class="quiz-option" onclick="selectQuizAnswer(3, 1, this)" data-i18n="q3a1">It is easier to spend money kept in a bank</button>
+                                    <button class="quiz-option" onclick="selectQuizAnswer(3, 2, this)" data-i18n="q3a2">There is no difference between cash and a bank account</button>
+                                    <button class="quiz-option" onclick="selectQuizAnswer(3, 3, this)" data-i18n="q3a3">Not sure of the benefits</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(2)">← Back</button>
+                            <button class="btn-primary" id="btn-quiz-next" onclick="goToScreen(4)" disabled data-i18n="continue">Continue →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 4: Digital Confidence Assessment -->
+                <div class="screen" id="screen4">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="digitalTitle">Digital Confidence Assessment</h2>
+                            <p data-i18n="digitalDesc">Complete these three simple interactive tasks to test your smartphone and touch screen comfort.</p>
+                        </div>
+
+                        <div class="digital-tasks-container">
+                            <!-- Task 1: Custom Numeric Keypad -->
+                            <div class="task-widget glass" id="dig-task-1">
+                                <div class="badge-task" data-i18n="task1Title">Task 1: Typing Numbers</div>
+                                <h3 data-i18n="task1Heading">Enter Numeric Code</h3>
+                                <p data-i18n="task1Desc">Using the screen keypad below, type the code: <strong class="highlight-code">4096</strong></p>
+                                
+                                <div class="pin-display-wrapper">
+                                    <div class="pin-digits" id="pin-display">----</div>
+                                </div>
+
+                                <div class="custom-keypad">
+                                    <button class="key-btn" onclick="pressKey(1)">1</button>
+                                    <button class="key-btn" onclick="pressKey(2)">2</button>
+                                    <button class="key-btn" onclick="pressKey(3)">3</button>
+                                    <button class="key-btn" onclick="pressKey(4)">4</button>
+                                    <button class="key-btn" onclick="pressKey(5)">5</button>
+                                    <button class="key-btn" onclick="pressKey(6)">6</button>
+                                    <button class="key-btn" onclick="pressKey(7)">7</button>
+                                    <button class="key-btn" onclick="pressKey(8)">8</button>
+                                    <button class="key-btn" onclick="pressKey(9)">9</button>
+                                    <button class="key-btn danger-key" onclick="clearKeys()">CLR</button>
+                                    <button class="key-btn" onclick="pressKey(0)">0</button>
+                                    <button class="key-btn success-key" onclick="submitNumericTask()">OK</button>
+                                </div>
+                                <div class="task-result-status" id="task1-status" data-i18n="waitingInput">Waiting for input...</div>
+                            </div>
+
+                            <!-- Task 2: Drag and Drop -->
+                            <div class="task-widget glass" id="dig-task-2">
+                                <div class="badge-task" data-i18n="task2Title">Task 2: Drag & Drop</div>
+                                <h3 data-i18n="task2Heading">Secure Your Coin</h3>
+                                <p data-i18n="task2Desc">Tap and drag the gold coin into the Piggy Bank below.</p>
+                                
+                                <div class="drag-sandbox">
+                                    <div class="coin-drag-item" draggable="true" id="draggable-coin" ondragstart="dragCoin(event)">🪙</div>
+                                    
+                                    <div class="piggy-bank-target" id="piggy-target" ondragover="allowDropCoin(event)" ondrop="dropCoin(event)">
+                                        <div class="piggy-icon">🐷</div>
+                                        <span class="piggy-text" data-i18n="dropCoin">Drop Coin Here</span>
+                                    </div>
+                                </div>
+                                <div class="task-result-status" id="task2-status" data-i18n="dragStart">Drag coin to start</div>
+                            </div>
+
+                            <!-- Task 3: Swipe to Authorize -->
+                            <div class="task-widget glass" id="dig-task-3">
+                                <div class="badge-task" data-i18n="task3Title">Task 3: Swipe Gesture</div>
+                                <h3 data-i18n="task3Heading">Swipe to Pay</h3>
+                                <p data-i18n="task3Desc">Authorize simulated payment by swiping the slider key to the right.</p>
+                                
+                                <div class="swipe-slider-container" id="swipe-container">
+                                    <div class="swipe-track">
+                                        <div class="swipe-handle" id="swipe-handle" onmousedown="startSwipe(event)" ontouchstart="startSwipe(event)">➔</div>
+                                        <span class="swipe-placeholder" data-i18n="swipeConfirm">Swipe Right to Confirm</span>
+                                    </div>
+                                </div>
+                                <div class="task-result-status" id="task3-status" data-i18n="slideHandle">Slide handle to right</div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(3)">← Back</button>
+                            <button class="btn-primary" id="btn-digital-next" onclick="goToScreen(5)" disabled data-i18n="continue">Continue →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 5: Trust & Safety Assessment -->
+                <div class="screen" id="screen5">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="trustTitle">Trust & Safety Concerns</h2>
+                            <p data-i18n="trustDesc">Select any concerns that make you hesitate to use digital finance. We'll show you how we solve them.</p>
+                        </div>
+
+                        <div class="trust-assessment-grid">
+                            <div class="concern-selection-box">
+                                <h3 data-i18n="trustConcerns">What are your main concerns? (Select all that apply)</h3>
+                                <div class="concern-options-grid">
+                                    <div class="concern-checkbox-card" onclick="toggleConcern('fraud', this)">
+                                        <div class="check-box-visual"></div>
+                                        <span class="con-icon">😈</span>
+                                        <div class="con-text">
+                                            <h4 data-i18n="concernFraud">Fear of Scams & Fraud</h4>
+                                            <p data-i18n="concernFraudDesc">Concerns about losing money to online scammers</p>
+                                        </div>
+                                    </div>
+                                    <div class="concern-checkbox-card" onclick="toggleConcern('privacy', this)">
+                                        <div class="check-box-visual"></div>
+                                        <span class="con-icon">🔒</span>
+                                        <div class="con-text">
+                                            <h4 data-i18n="concernPrivacy">Data & Account Privacy</h4>
+                                            <p data-i18n="concernPrivacyDesc">Worries that personal info will be leaked</p>
+                                        </div>
+                                    </div>
+                                    <div class="concern-checkbox-card" onclick="toggleConcern('charges', this)">
+                                        <div class="check-box-visual"></div>
+                                        <span class="con-icon">💸</span>
+                                        <div class="con-text">
+                                            <h4 data-i18n="concernCharges">Hidden Charges & Fees</h4>
+                                            <p data-i18n="concernChargesDesc">Suspicion of bank deducts without telling you</p>
+                                        </div>
+                                    </div>
+                                    <div class="concern-checkbox-card" onclick="toggleConcern('mistakes', this)">
+                                        <div class="check-box-visual"></div>
+                                        <span class="con-icon">⚠️</span>
+                                        <div class="con-text">
+                                            <h4 data-i18n="concernMistakes">Fear of Making Mistakes</h4>
+                                            <p data-i18n="concernMistakesDesc">Fear that typing a wrong digit sends money to the wrong person</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="trust-feedback-box glass" id="trust-feedback-panel">
+                                <div class="placeholder-feedback">
+                                    <h3 data-i18n="reassurancePortal">💡 Reassurance Portal</h3>
+                                    <p data-i18n="reassuranceDesc">Select one or more concerns on the left to read safety facts and regulatory guarantees.</p>
+                                </div>
+                                <div class="actual-feedback-content" id="trust-feedback-details" style="display: none;">
+                                    <!-- Dynamic content will be injected by script.js -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(4)">← Back</button>
+                            <button class="btn-primary" onclick="goToScreen(6)" data-i18n="continue">Continue →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 6: Financial Reliability and Income Assessment -->
+                <div class="screen" id="screen6">
+                    <div class="screen-layout-split">
+                        <div class="reliability-intro-card glass">
+                            <div class="badge-reliability" data-i18n="altAssessment">ALTERNATIVE ASSESSMENT</div>
+                            <h2 data-i18n="reliabilityTitle">Alternative Financial Reliability</h2>
+                            <p data-i18n="reliabilityDesc">For users who do not have formal bank credit histories or salary slips, ArthaSetu evaluates alternative indicators of trust based on savings patterns and transactional habits.</p>
+                            <div class="graphic-reliability">
+                                <div class="ring-indicator">
+                                    <div class="inner-pulse"></div>
+                                    <span class="percentage" id="reliabilityScoreDisplay">0%</span>
+                                </div>
+                                <p class="status-desc" data-i18n="simReliability">Simulated Reliability Profile</p>
+                            </div>
+                        </div>
+
+                        <div class="reliability-form-card glass">
+                            <h2 data-i18n="incomeProfile">Income & Savings Profile</h2>
+                            <p class="subtitle" data-i18n="consentDetails">Please provide consent-based details to calculate your reliability tier.</p>
+                            
+                            <div class="reliability-choices">
+                                <div class="form-field-group">
+                                    <label class="field-label" data-i18n="incomePattern">1. How is your income pattern?</label>
+                                    <div class="income-buttons-group">
+                                        <button class="inc-btn" onclick="selectIncomePattern('regular', this)" data-i18n="incomeRegular">📅 Regular Monthly</button>
+                                        <button class="inc-btn" onclick="selectIncomePattern('irregular', this)" data-i18n="incomeIrregular">⚡ Irregular Daily/Weekly</button>
+                                        <button class="inc-btn" onclick="selectIncomePattern('seasonal', this)" data-i18n="incomeSeasonal">🌾 Seasonal (Harvest/Gigs)</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-field-group">
+                                    <label class="field-label" data-i18n="indicatorsTitle">2. Select indicators that apply to you:</label>
+                                    <div class="alt-indicators-list">
+                                        <label class="indicator-item">
+                                            <input type="checkbox" onchange="recalculateReliabilityScore()" class="rel-check">
+                                            <span class="ind-text" data-i18n="ind1">I pay shop rent or utility bills regularly</span>
+                                        </label>
+                                        <label class="indicator-item">
+                                            <input type="checkbox" onchange="recalculateReliabilityScore()" class="rel-check">
+                                            <span class="ind-text" data-i18n="ind2">I keep some cash savings in a post office/savings box</span>
+                                        </label>
+                                        <label class="indicator-item">
+                                            <input type="checkbox" onchange="recalculateReliabilityScore()" class="rel-check">
+                                            <span class="ind-text" data-i18n="ind3">I have a running trade inventory or business supplies</span>
+                                        </label>
+                                        <label class="indicator-item">
+                                            <input type="checkbox" onchange="recalculateReliabilityScore()" class="rel-check">
+                                            <span class="ind-text" data-i18n="ind4">I have zero outstanding local informal lender debt</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="consent-agreement-box glass">
+                                    <label class="consent-checkbox-label">
+                                        <input type="checkbox" id="reliabilityConsent" onchange="handleConsentChange(this)">
+                                        <span class="consent-text" data-i18n="consentText">I consent to use alternative indicators to build a simulated credit reliability score.</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="footer-navigation">
+                                <button class="btn-secondary" onclick="goToScreen(5)">← Back</button>
+                                <button class="btn-primary" id="btn-reliability-next" onclick="calculateStatisticalProfile()" disabled data-i18n="generateProfile">Generate Engine Profile →</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 7: Statistical Engine & Adaptive Pathway Selection -->
+                <div class="screen" id="screen7">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="engineTitle">ArthaSetu Adaptive Profiling Engine</h2>
+                            <p data-i18n="engineDesc">Here is your computed financial profile. The app selects a pathway tailored to you.</p>
+                        </div>
+
+                        <div class="statistical-engine-grid">
+                            <div class="score-display-column">
+                                <div class="score-card glass">
+                                    <span class="score-lbl">Financial Literacy</span>
+                                    <div class="score-bar-wrapper">
+                                        <div class="score-bar" id="bar-lit" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="score-number" id="lbl-lit">0%</span>
+                                </div>
+                                <div class="score-card glass">
+                                    <span class="score-lbl">Digital Confidence</span>
+                                    <div class="score-bar-wrapper">
+                                        <div class="score-bar" id="bar-dig" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="score-number" id="lbl-dig">0%</span>
+                                </div>
+                                <div class="score-card glass">
+                                    <span class="score-lbl" data-i18n="scoreReliability">Alternative Reliability</span>
+                                    <div class="score-bar-wrapper">
+                                        <div class="score-bar" id="bar-rel" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="score-number" id="lbl-rel">0%</span>
+                                </div>
+                            </div>
+
+                            <div class="pathway-decision-card glass">
+                                <div class="decision-header">
+                                    <span class="badge-decision" data-i18n="recommendedPath">RECOMMENDED ONBOARDING PATHWAY</span>
+                                    <h2 id="pathway-name" data-i18n="calculating">Calculating...</h2>
+                                </div>
+                                <div class="decision-body" id="pathway-desc">
+                                    Select continue to run profiling.
+                                </div>
+                                <div class="pathway-highlights" id="pathway-features">
+                                    <!-- Dynamic list of activated system features -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(6)">← Back</button>
+                            <button class="btn-primary" onclick="goToScreen(8)" data-i18n="enterLab">Enter Safe Finance Lab →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 8: Safe Finance Lab -->
+                <div class="screen" id="screen8">
+                    <div class="sandbox-app-container glass">
+                        <div class="sandbox-menu-bar">
+                            <div class="sandbox-menu-header">
+                                <h3>Safe Finance Lab</h3>
+                                <span class="tag-sandbox" data-i18n="practiceSandboxTag">PRACTICE SANDBOX</span>
+                            </div>
+                            <div class="sandbox-tabs">
+                                <button class="sandbox-tab-btn active" onclick="switchSandboxTab('payment', this)" data-i18n="tabPayment">📱 Practice Payment</button>
+                                <button class="sandbox-tab-btn" onclick="switchSandboxTab('fraud', this)" data-i18n="tabFraud">🛡️ Fraud Phishing Detector</button>
+                                <button class="sandbox-tab-btn" onclick="switchSandboxTab('loan', this)" data-i18n="tabLoan">📊 Loan Comparator</button>
+                                <button class="sandbox-tab-btn" onclick="switchSandboxTab('budget', this)" data-i18n="tabBudget">🌾 Budget & Volatility</button>
+                            </div>
+                        </div>
+
+                        <div class="sandbox-view-area">
+                            <!-- Tab 1: Payment Simulator -->
+                            <div class="sandbox-tab-view active" id="tab-payment">
+                                <div class="simulator-payment-split">
+                                    <div class="mobile-phone-mockup">
+                                        <div class="phone-screen">
+                                            <div class="phone-header">
+                                                <span class="time">12:30 PM</span>
+                                                <span class="network">📶 🔋</span>
+                                            </div>
+                                            <div class="payment-app-content">
+                                                <div class="app-top" data-i18n="arthapay">ArthaPay</div>
+                                                
+                                                <!-- Payment Step 1: Input recipient -->
+                                                <div class="pay-step active" id="pay-step-1">
+                                                    <label class="pay-label" data-i18n="enterRecipient">Enter Recipient's UPI ID / Phone</label>
+                                                    <input type="text" id="recipient-input" placeholder="e.g. kisan@upi or 9876543210" class="pay-input">
+                                                    <button class="pay-btn" onclick="validateRecipient()" data-i18n="verifyRecipient">Verify Recipient</button>
+                                                </div>
+
+                                                <!-- Payment Step 2: Amount -->
+                                                <div class="pay-step" id="pay-step-2" style="display: none;">
+                                                    <div class="verified-header">
+                                                        <span class="check-circle">✓</span>
+                                                        <span class="recipient-name" id="verified-name">Kisan Bhai (Verified)</span>
+                                                    </div>
+                                                    <label class="pay-label" data-i18n="enterAmount">Enter Transfer Amount (₹)</label>
+                                                    <input type="number" id="transfer-amount" placeholder="Min ₹10, Max ₹2,000" class="pay-input">
+                                                    <p class="balance-helper" data-i18n="walletBalance">Practice Wallet Balance: ₹1,000</p>
+                                                    <button class="pay-btn" onclick="proceedToPaymentPIN()" data-i18n="continueToPay">Continue to Pay</button>
+                                                </div>
+
+                                                <!-- Payment Step 3: PIN Pad -->
+                                                <div class="pay-step" id="pay-step-3" style="display: none;">
+                                                    <div class="pin-header">
+                                                        <h4 data-i18n="enterUPIPIN">Enter 6-Digit UPI PIN</h4>
+                                                        <p data-i18n="payingRs">Paying ₹<span id="pin-paying-amount">0.00</span> to Kisan Bhai</p>
+                                                    </div>
+                                                    <div class="pin-stars" id="payment-pin-display">------</div>
+                                                    <div class="phone-keypad">
+                                                        <button class="p-key" onclick="pressPaymentKey(1)">1</button>
+                                                        <button class="p-key" onclick="pressPaymentKey(2)">2</button>
+                                                        <button class="p-key" onclick="pressPaymentKey(3)">3</button>
+                                                        <button class="p-key" onclick="pressPaymentKey(4)">4</button>
+                                                        <button class="p-key" onclick="pressPaymentKey(5)">5</button>
+                                                        <button class="p-key" onclick="pressPaymentKey(6)">6</button>
+                                                        <button class="p-key" onclick="pressPaymentKey(7)">7</button>
+                                                        <button class="p-key" onclick="pressPaymentKey(8)">8</button>
+                                                        <button class="p-key" onclick="pressPaymentKey(9)">9</button>
+                                                        <button class="p-key danger-key" onclick="clearPaymentKeys()">CLR</button>
+                                                        <button class="p-key" onclick="pressPaymentKey(0)">0</button>
+                                                        <button class="p-key success-key" onclick="submitPaymentPIN()">OK</button>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Payment Step 4: Success Receipt -->
+                                                <div class="pay-step" id="pay-step-4" style="display: none;">
+                                                    <div class="receipt-success">
+                                                        <div class="receipt-success-icon">✓</div>
+                                                        <h3 data-i18n="txnSuccess">Transaction Successful!</h3>
+                                                        <p class="amount-receipt">₹<span id="receipt-amount-val">0.00</span></p>
+                                                        <p class="receipt-to" data-i18n="sentTo">Sent to Kisan Bhai</p>
+                                                        <div class="receipt-details">
+                                                            <span data-i18n="txnId">Transaction ID:</span> <strong>TXN87654321</strong>
+                                                        </div>
+                                                        <button class="receipt-close-btn" onclick="resetPaymentSimulator()" data-i18n="payAgain">Pay Again</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="simulator-guide-card">
+                                        <h3 data-i18n="paymentTutorial">Simulated Payment Tutorial</h3>
+                                        <p data-i18n="paymentTutorialDesc">Learn how to transfer funds securely without risking real money.</p>
+                                        <div class="quick-tips-box">
+                                            <h4 data-i18n="crucialGuidelines">💡 Crucial Guidelines:</h4>
+                                            <ul>
+                                                <li data-i18n="practicePIN">Your practice PIN code is: <strong>123456</strong>.</li>
+                                                <li data-i18n="tip2">Double check the verified recipient name before clicking pay.</li>
+                                                <li data-i18n="tip3">Never type your PIN anywhere except standard secure banker screens.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="wallet-history-card glass">
+                                            <h4 data-i18n="walletHistory">Wallet History</h4>
+                                            <div class="history-items-list" id="sandboxHistoryItems">
+                                                <div class="hist-item">
+                                                    <span data-i18n="welcomeBonus">Welcome Bonus</span>
+                                                    <span class="green-text">+₹1,000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab 2: Phishing & Fraud Detector -->
+                            <div class="sandbox-tab-view" id="tab-fraud">
+                                <div class="fraud-detector-grid">
+                                    <div class="inbox-list-column">
+                                        <h3 data-i18n="messageInbox">📱 Message Inbox</h3>
+                                        <p class="subtitle" data-i18n="fraudDesc">Click on a message to read it and decide if it is Safe or Spam.</p>
+                                        <div class="sms-threads-list" id="smsThreadsList">
+                                            <!-- SMS Threads will be injected dynamically -->
+                                        </div>
+                                    </div>
+
+                                    <div class="sms-view-column">
+                                        <div class="sms-header">
+                                            <span class="sms-sender" id="smsDetailSender" data-i18n="selectMessage">Select a message</span>
+                                        </div>
+                                        <div class="sms-body-view" id="smsDetailBody">
+                                            Please click on an incoming SMS from the list to analyze its safety.
+                                        </div>
+                                        <div class="sms-actions" id="smsActionButtons" style="display: none;">
+                                            <button class="btn-fraud-safe" onclick="evaluateSMS(true)" data-i18n="classifySafe">✔️ Classify as SAFE</button>
+                                            <button class="btn-fraud-spam" onclick="evaluateSMS(false)" data-i18n="reportFraud">🚨 Report as FRAUD / SPAM</button>
+                                        </div>
+                                        <div class="sms-explanation-card glass" id="smsExplanationPanel" style="display: none;">
+                                            <!-- Dynamic explanation will show here -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab 3: Loan Comparator -->
+                            <div class="sandbox-tab-view" id="tab-loan">
+                                <div class="loan-comparator-layout">
+                                    <div class="loan-sliders">
+                                        <h3 data-i18n="loanTitle">📊 Loan Cost Simulator</h3>
+                                        <p data-i18n="loanDesc">Adjust sliders to see total repayments and avoid interest traps.</p>
+                                        
+                                        <div class="slider-field">
+                                            <div class="lbl-row">
+                                                <span data-i18n="principalAmt">Principal Amount</span>
+                                                <strong id="val-loan-principal">₹10,000</strong>
+                                            </div>
+                                            <input type="range" id="slider-principal" min="5000" max="50000" step="1000" value="10000" oninput="calculateLoans()">
+                                        </div>
+
+                                        <div class="slider-field">
+                                            <div class="lbl-row">
+                                                <span data-i18n="interestRate">Interest Rate (Annual)</span>
+                                                <strong id="val-loan-rate">12%</strong>
+                                            </div>
+                                            <input type="range" id="slider-rate" min="5" max="36" step="1" value="12" oninput="calculateLoans()">
+                                        </div>
+
+                                        <div class="slider-field">
+                                            <div class="lbl-row">
+                                                <span data-i18n="tenure">Tenure (Months)</span>
+                                                <strong id="val-loan-tenure">12 Months</strong>
+                                            </div>
+                                            <input type="range" id="slider-tenure" min="6" max="36" step="6" value="12" oninput="calculateLoans()">
+                                        </div>
+                                    </div>
+
+                                    <div class="loan-comparison-cards">
+                                        <!-- Loan A -->
+                                        <div class="loan-card-compare simple-interest">
+                                            <span class="badge-loan" data-i18n="flatLoan">FLAT LOAN (SIMPLE INTEREST)</span>
+                                            <h3 data-i18n="flatRateFinancing">Flat Rate Financing</h3>
+                                            <div class="calc-metrics">
+                                                <div class="metric">
+                                                    <span class="lbl" data-i18n="monthlyEMI">Monthly EMI</span>
+                                                    <strong class="val" id="emi-flat">₹933</strong>
+                                                </div>
+                                                <div class="metric">
+                                                    <span class="lbl" data-i18n="totalInterest">Total Interest</span>
+                                                    <strong class="val text-green" id="interest-flat">₹1,200</strong>
+                                                </div>
+                                                <div class="metric">
+                                                    <span class="lbl" data-i18n="totalRepayment">Total Repayment</span>
+                                                    <strong class="val" id="repay-flat">₹11,200</strong>
+                                                </div>
+                                            </div>
+                                            <div class="loan-risk-desc">
+                                                Interest is calculated on the initial principal only.
+                                            </div>
+                                        </div>
+
+                                        <!-- Loan B -->
+                                        <div class="loan-card-compare compound-interest warning">
+                                            <span class="badge-loan" data-i18n="compoundLoan">COMPOUND LOAN (REDUCING BALANCE)</span>
+                                            <h3 data-i18n="reducingBalanceFinancing">Reducing Balance Financing</h3>
+                                            <div class="calc-metrics">
+                                                <div class="metric">
+                                                    <span class="lbl">Monthly EMI</span>
+                                                    <strong class="val" id="emi-reduce">₹888</strong>
+                                                </div>
+                                                <div class="metric">
+                                                    <span class="lbl">Total Interest</span>
+                                                    <strong class="val text-orange" id="interest-reduce">₹662</strong>
+                                                </div>
+                                                <div class="metric">
+                                                    <span class="lbl">Total Repayment</span>
+                                                    <strong class="val" id="repay-reduce">₹10,662</strong>
+                                                </div>
+                                            </div>
+                                            <div class="loan-risk-desc">
+                                                Interest is calculated only on the outstanding principal. <strong>Better than Flat Loan!</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab 4: Budget Volatility Planner -->
+                            <div class="sandbox-tab-view" id="tab-budget">
+                                <div class="budget-planner-grid">
+                                    <div class="budget-game-controls">
+                                        <h3 data-i18n="budgetTitle">🌾 Dynamic Income Volatility Simulator</h3>
+                                        <p data-i18n="budgetDesc">Manage expenses under varying income constraints. Play the simulated month!</p>
+                                        
+                                        <div class="budget-profile-pill">
+                                            <span data-i18n="currentIncome">Current Income Model:</span> <strong id="game-income-type">Regular</strong>
+                                        </div>
+
+                                        <div class="budget-inputs">
+                                            <div class="game-sliders">
+                                                <div class="game-slider-field">
+                                                    <div class="lbl-row">
+                                                        <span data-i18n="foodAlloc">Food & Rent Allocation (₹)</span>
+                                                        <strong id="game-val-food">₹2,000</strong>
+                                                    </div>
+                                                    <input type="range" id="game-alloc-food" min="1000" max="5000" step="200" value="2000" oninput="updateGameAllocations()">
+                                                </div>
+
+                                                <div class="game-slider-field">
+                                                    <div class="lbl-row">
+                                                        <span data-i18n="savingsBox">Savings Box (₹)</span>
+                                                        <strong id="game-val-savings">₹500</strong>
+                                                    </div>
+                                                    <input type="range" id="game-alloc-savings" min="0" max="3000" step="100" value="500" oninput="updateGameAllocations()">
+                                                </div>
+
+                                                <div class="game-slider-field">
+                                                    <div class="lbl-row">
+                                                        <span data-i18n="growthAlloc">Invest / Business Growth (₹)</span>
+                                                        <strong id="game-val-growth">₹500</strong>
+                                                    </div>
+                                                    <input type="range" id="game-alloc-growth" min="0" max="3000" step="100" value="500" oninput="updateGameAllocations()">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn-play-month" onclick="playBudgetMonth()" data-i18n="simulateMonth">🌾 Simulate Next Month 🌾</button>
+                                    </div>
+
+                                    <div class="budget-game-status">
+                                        <div class="status-summary-row">
+                                            <div class="game-stat">
+                                                <span class="lbl" data-i18n="walletBal">Wallet Balance</span>
+                                                <strong class="val text-green" id="game-wallet-val">₹3,000</strong>
+                                            </div>
+                                            <div class="game-stat">
+                                                <span class="lbl" data-i18n="accumSavings">Accumulated Savings</span>
+                                                <strong class="val text-orange" id="game-savings-val">₹1,500</strong>
+                                            </div>
+                                        </div>
+
+                                        <div class="game-events-log glass">
+                                            <h4 data-i18n="activityLog">Activity Log</h4>
+                                            <div class="events-scroll" id="gameEventsLog">
+                                                <div class="event-log-entry">Game started. Income model: Regular. Wallet balance initialized.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(7)">← Back</button>
+                            <button class="btn-primary" onclick="goToScreen(9)" data-i18n="continue">Continue →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 9: Personalised Financial Guidance -->
+                <div class="screen" id="screen9">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="guidanceTitle">Personalised Financial Guidance</h2>
+                            <p data-i18n="guidanceDesc">Here are crucial financial rules curated based on your assessments.</p>
+                        </div>
+
+                        <div class="guidance-cards-grid" id="guidanceCardsGrid">
+                            <!-- Target elements will be dynamically loaded by script.js -->
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(8)">← Back</button>
+                            <button class="btn-primary" onclick="goToScreen(10)" data-i18n="viewReport">View Readiness Report →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 10: Financial Readiness Report -->
+                <div class="screen" id="screen10">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="reportTitle">Financial Readiness Report</h2>
+                            <p data-i18n="reportDesc">Excellent progress! Here is your official competency evaluation certificate.</p>
+                        </div>
+
+                        <div class="certificate-mockup glass" id="certificateContent">
+                            <div class="cert-border">
+                                <div class="cert-logo">🎓</div>
+                                <h1 data-i18n="certTitle">ArthaSetu Competency Certificate</h1>
+                                <p class="cert-subtitle" data-i18n="certAwardedTo">This certificate is awarded to</p>
+                                <h2 class="cert-user-name" id="certUserName">Guest User</h2>
+                                <p class="cert-desc" data-i18n="certDesc">for successfully completing the adaptive financial profiling and practicing secure UPI transactions in the Safe Finance Lab simulator.</p>
+                                
+                                <div class="cert-stats-row">
+                                    <div class="cert-stat">
+                                        <span class="val" id="certLitScore">0%</span>
+                                        <span class="lbl" data-i18n="certLiteracy">Literacy Level</span>
+                                    </div>
+                                    <div class="cert-stat">
+                                        <span class="val" id="certDigScore">0%</span>
+                                        <span class="lbl">Digital Confidence</span>
+                                    </div>
+                                    <div class="cert-stat">
+                                        <span class="val" id="certPathway">Guided</span>
+                                        <span class="lbl" data-i18n="certPathway">Assisted Pathway</span>
+                                    </div>
+                                </div>
+
+                                <div class="cert-footer">
+                                    <div class="sig-block">
+                                        <span class="sig">ArthaSetu Engine</span>
+                                        <span class="lbl" data-i18n="certSystem">System Issued</span>
+                                    </div>
+                                    <div class="sig-block">
+                                        <span class="sig" id="certDateVal">Aug 23, 2026</span>
+                                        <span class="lbl" data-i18n="certDate">Date of Verification</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(9)">← Back</button>
+                            <button class="btn-outline-print" onclick="window.print()" data-i18n="printCert">🖨️ Print Certificate</button>
+                            <button class="btn-primary" onclick="goToScreen(11)" data-i18n="provideFeedback">Provide Feedback →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 11: Feedback & Survey -->
+                <div class="screen" id="screen11">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="feedbackTitle">Feedback & Outcome Measurement</h2>
+                            <p data-i18n="feedbackDesc">Help us evaluate this adaptive framework. Tell us how you felt during the onboarding.</p>
+                        </div>
+
+                        <div class="feedback-survey-form">
+                            <!-- Question 1: Perceived Difficulty -->
+                            <div class="survey-question-block">
+                                <label class="field-label" data-i18n="surveyQ1">1. How easy was it to navigate this application?</label>
+                                <div class="rating-stars" id="star-nav">
+                                    <span class="star" onclick="rateSurvey('nav', 1)">★</span>
+                                    <span class="star" onclick="rateSurvey('nav', 2)">★</span>
+                                    <span class="star" onclick="rateSurvey('nav', 3)">★</span>
+                                    <span class="star" onclick="rateSurvey('nav', 4)">★</span>
+                                    <span class="star" onclick="rateSurvey('nav', 5)">★</span>
+                                </div>
+                            </div>
+
+                            <!-- Question 2: Comprehension -->
+                            <div class="survey-question-block">
+                                <label class="field-label" data-i18n="surveyQ2">2. Did you understand the security rules and fraud warnings clearly?</label>
+                                <div class="rating-stars" id="star-comp">
+                                    <span class="star" onclick="rateSurvey('comp', 1)">★</span>
+                                    <span class="star" onclick="rateSurvey('comp', 2)">★</span>
+                                    <span class="star" onclick="rateSurvey('comp', 3)">★</span>
+                                    <span class="star" onclick="rateSurvey('comp', 4)">★</span>
+                                    <span class="star" onclick="rateSurvey('comp', 5)">★</span>
+                                </div>
+                            </div>
+
+                            <!-- Question 3: Confidence -->
+                            <div class="survey-question-block">
+                                <label class="field-label" data-i18n="surveyQ3">3. How confident do you feel doing mobile payments on your own now?</label>
+                                <div class="rating-stars" id="star-conf">
+                                    <span class="star" onclick="rateSurvey('conf', 1)">★</span>
+                                    <span class="star" onclick="rateSurvey('conf', 2)">★</span>
+                                    <span class="star" onclick="rateSurvey('conf', 3)">★</span>
+                                    <span class="star" onclick="rateSurvey('conf', 4)">★</span>
+                                    <span class="star" onclick="rateSurvey('conf', 5)">★</span>
+                                </div>
+                            </div>
+
+                            <!-- Comment box -->
+                            <div class="survey-question-block">
+                                <label class="field-label" data-i18n="surveyQ4">4. Do you have any suggestions or comments?</label>
+                                <textarea id="feedback-comments" placeholder="Type here in Hindi, English, etc." class="survey-textarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(10)">← Back</button>
+                            <button class="btn-primary" onclick="completeOnboardingFlow()" data-i18n="saveReset">Save & Reset Application</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 12: Security Dashboard -->
+                <div class="screen" id="screen12">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="title12">🛡️ Security Dashboard</h2>
+                            <p data-i18n="securityDashDesc">10 Next-Gen Security Innovations protecting your financial data</p>
+                        </div>
+
+                        <div class="security-dashboard">
+                            <div class="security-status-bar glass">
+                                <div class="security-badge">
+                                    <span class="badge-icon">🔐</span>
+                                    <span class="badge-label">PQC Encryption</span>
+                                    <span class="badge-status active">Active</span>
+                                </div>
+                                <div class="security-badge">
+                                    <span class="badge-icon">🔗</span>
+                                    <span class="badge-label">Audit Chain</span>
+                                    <span class="badge-status active" id="auditChainStatus">Intact</span>
+                                </div>
+                                <div class="security-badge">
+                                    <span class="badge-icon">🎲</span>
+                                    <span class="badge-label">Risk Score</span>
+                                    <span class="badge-status" id="riskScoreDisplay">Low</span>
+                                </div>
+                            </div>
+
+                            <div class="innovations-grid">
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">🔮</div>
+                                    <h3>Zero-Knowledge Proofs</h3>
+                                    <p>Prove your age, income, or credentials without revealing actual data</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">🧮</div>
+                                    <h3>Fully Homomorphic Encryption</h3>
+                                    <p>Compute analytics on encrypted data — never decrypted on server</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">🔐</div>
+                                    <h3>Post-Quantum Cryptography</h3>
+                                    <p>CRYSTALS-Kyber-1024 & Dilithium-87 — quantum-resistant algorithms</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">⛓️</div>
+                                    <h3>Hash-Chained Audit</h3>
+                                    <p>Every action is SHA3-256 hashed and chained — tamper-evident logging</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">🏰</div>
+                                    <h3>Trusted Execution Environment</h3>
+                                    <p>Secure enclaves for sensitive computation (Intel SGX / AMD SEV)</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">✍️</div>
+                                    <h3>Smart Consent Management</h3>
+                                    <p>Cryptographic consent tokens — revoke anytime, scope-limited access</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">🧠</div>
+                                    <h3>Adaptive Risk Scoring</h3>
+                                    <p>ML-based real-time risk assessment adjusts security per request</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">🌫️</div>
+                                    <h3>Differential Privacy</h3>
+                                    <p>Calibrated Laplace noise protects individual data in analytics</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">🔄</div>
+                                    <h3>Crypto-Agility</h3>
+                                    <p>Seamless algorithm migration — upgrade encryption without downtime</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                                <div class="innovation-card glass">
+                                    <div class="innovation-icon">🆔</div>
+                                    <h3>Self-Sovereign Identity</h3>
+                                    <p>Decentralized DID-based identity — you own your data</p>
+                                    <span class="innovation-status active">● Active</span>
+                                </div>
+                            </div>
+
+                            <div class="audit-trail-section glass">
+                                <h3>📋 Recent Audit Trail</h3>
+                                <div id="auditTrailList" class="audit-trail-list">
+                                    <p class="placeholder-text">Complete assessments to generate audit entries...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(11)">← Back</button>
+                            <button class="btn-primary" onclick="goToScreen(13)">Consent Manager →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 13: Consent Manager -->
+                <div class="screen" id="screen13">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="title13">✍️ Smart Consent Manager</h2>
+                            <p data-i18n="consentMgrDesc">Cryptographic consent tokens — you control who accesses your data</p>
+                        </div>
+
+                        <div class="consent-manager">
+                            <div class="consent-grant-form glass">
+                                <h3>Grant New Consent</h3>
+                                <div class="consent-form-group">
+                                    <label>Consent Type</label>
+                                    <select id="consentTypeSelect" class="consent-select">
+                                        <option value="financial_data">Financial Data Access</option>
+                                        <option value="profile_data">Profile Data Access</option>
+                                        <option value="transaction_history">Transaction History</option>
+                                        <option value="risk_assessment">Risk Assessment</option>
+                                        <option value="fhe_computation">FHE Computation</option>
+                                    </select>
+                                </div>
+                                <div class="consent-form-group">
+                                    <label>Purpose</label>
+                                    <input type="text" id="consentPurposeInput" class="consent-input" placeholder="e.g., Loan eligibility check">
+                                </div>
+                                <div class="consent-form-group">
+                                    <label>Data Types (comma-separated)</label>
+                                    <input type="text" id="consentDataTypesInput" class="consent-input" placeholder="e.g., age, income, transaction_count">
+                                </div>
+                                <div class="consent-form-group">
+                                    <label>Expires In (days)</label>
+                                    <input type="number" id="consentExpiryInput" class="consent-input" value="30" min="1" max="90">
+                                </div>
+                                <button class="btn-primary" onclick="grantConsent()">Generate Consent Token</button>
+                                <div id="consentResult" class="consent-result" style="display:none;"></div>
+                            </div>
+
+                            <div class="consent-list-section glass">
+                                <h3>Your Active Consents</h3>
+                                <div id="consentList" class="consent-list">
+                                    <p class="placeholder-text">No active consents. Grant one above.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(12)">← Back</button>
+                            <button class="btn-primary" onclick="goToScreen(14)">ZKP Verifier →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen 14: ZKP Verifier -->
+                <div class="screen" id="screen14">
+                    <div class="screen-layout-single glass">
+                        <div class="section-header">
+                            <h2 data-i18n="title14">🔮 ZKP Identity Verifier</h2>
+                            <p data-i18n="zkpVerifierDesc">Prove your attributes without revealing the actual data</p>
+                        </div>
+
+                        <div class="zkp-verifier">
+                            <div class="zkp-prove-section glass">
+                                <h3>Generate Zero-Knowledge Proof</h3>
+                                <div class="zkp-type-selector">
+                                    <button class="zkp-type-btn active" onclick="selectZKPType('age')">Age Proof</button>
+                                    <button class="zkp-type-btn" onclick="selectZKPType('income')">Income Proof</button>
+                                    <button class="zkp-type-btn" onclick="selectZKPType('confidence')">Confidence Proof</button>
+                                </div>
+
+                                <div id="zkp-age-form" class="zkp-form">
+                                    <div class="consent-form-group">
+                                        <label>Your Age</label>
+                                        <input type="number" id="zkpAge" class="consent-input" placeholder="e.g., 25">
+                                    </div>
+                                    <div class="consent-form-group">
+                                        <label>Prove Above Threshold</label>
+                                        <input type="number" id="zkpAgeThreshold" class="consent-input" value="18">
+                                    </div>
+                                </div>
+                                <div id="zkp-income-form" class="zkp-form" style="display:none;">
+                                    <div class="consent-form-group">
+                                        <label>Annual Income (₹)</label>
+                                        <input type="number" id="zkpIncome" class="consent-input" placeholder="e.g., 200000">
+                                    </div>
+                                    <div class="consent-form-group">
+                                        <label>Prove Above Threshold (₹)</label>
+                                        <input type="number" id="zkpIncomeThreshold" class="consent-input" value="100000">
+                                    </div>
+                                </div>
+                                <div id="zkp-confidence-form" class="zkp-form" style="display:none;">
+                                    <div class="consent-form-group">
+                                        <label>Digital Confidence Score</label>
+                                        <input type="number" id="zkpScore" class="consent-input" placeholder="e.g., 75" min="0" max="100">
+                                    </div>
+                                    <div class="consent-form-group">
+                                        <label>Min Score</label>
+                                        <input type="number" id="zkpScoreMin" class="consent-input" value="0">
+                                    </div>
+                                    <div class="consent-form-group">
+                                        <label>Max Score</label>
+                                        <input type="number" id="zkpScoreMax" class="consent-input" value="100">
+                                    </div>
+                                </div>
+
+                                <button class="btn-primary" onclick="generateZKPProof()">Generate ZKP</button>
+                                <div id="zkpProofResult" class="zkp-proof-result" style="display:none;"></div>
+                            </div>
+
+                            <div class="zkp-verify-section glass">
+                                <h3>Verify ZKP</h3>
+                                <div class="consent-form-group">
+                                    <label>Paste Proof Hash</label>
+                                    <input type="text" id="zkpVerifyInput" class="consent-input" placeholder="Enter proof hash to verify">
+                                </div>
+                                <button class="btn-primary" onclick="verifyZKP()">Verify Proof</button>
+                                <div id="zkpVerifyResult" class="zkp-verify-result" style="display:none;"></div>
+                            </div>
+                        </div>
+
+                        <div class="screen-navigation">
+                            <button class="btn-secondary" onclick="goToScreen(13)">← Back</button>
+                            <button class="btn-primary" onclick="goToScreen(12)">Back to Dashboard</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Background Blob Animations -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Custom Speech Bubble for Voice Mode (Simulated TTS Assistant) -->
+    <div class="voice-assistant-overlay" id="assistantSpeechBubble" style="display: none;">
+        <div class="doot-avatar">🤖</div>
+        <div class="speech-content">
+            <span class="sender-name" data-i18n="assistantName">ArthaDoot Assistant:</span>
+            <p class="speech-text" id="assistantSpeechText" id="assistantSpeechText" data-i18n="welcomeArthasetu">Welcome to ArthaSetu.</p>
+        </div>
+    </div>
+
+    <script src="security-client.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
