@@ -17,7 +17,7 @@
     "redis": "^4.6.12",
     "jsonwebtoken": "^9.0.2",
     "bcryptjs": "^2.4.3",
-    "uuid": "^9.0.0",
+    "uuid": "^14.0.0",
     "helmet": "^7.1.0",
     "cors": "^2.8.5",
     "express-rate-limit": "^7.1.5",
