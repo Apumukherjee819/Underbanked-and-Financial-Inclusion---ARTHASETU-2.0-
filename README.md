@@ -34,7 +34,7 @@
 
 ## Overview
 
-**ARTHASETU 2.0** is an adaptive financial inclusion platform built for the **Smart India Hackathon 2026** (Track 1: Financial Inclusion for the Underbanked). It addresses the challenge of 300+ million credit-invisible gig workers in India who lack traditional credit histories — despite having verifiable trust signals like rental payments, medical expenses, and bill payment histories.
+**ARTHASETU 2.0** is an adaptive financial inclusion platform built for the **BUILD $ BANK 2026, IIT DELHI** (Track 1: Financial Inclusion for the Underbanked). It addresses the challenge of 300+ million credit-invisible gig workers in India who lack traditional credit histories — despite having verifiable trust signals like rental payments, medical expenses, and bill payment histories.
 
 The platform uses a **statistical user-profiling engine** that dynamically adapts interface, guidance, and pacing for first-time financial users. It combines **machine learning** (XGBoost, 99.5% accuracy) with **10-layer post-quantum security** (ZKP, FHE, PQC) to build trust while protecting user data.
 
